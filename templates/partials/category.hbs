@@ -1,0 +1,17 @@
+{{# each product }}
+<div class="row">
+    {{# each this }}
+    <div class="col">
+        <div class="cover">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.1001fonts.com%2Fhai-brush-demo-font.html&psig=AOvVaw0r-wHvxI3BmdNcsaUVT6Ey&ust=1596742146026000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjcltzmhOsCFQAAAAAdAAAAABAD" alt="feature_img" class="product-img">
+            <div class="product-body">
+                <h6> {{ this.name }} </h6>
+                <h6> {{ this.description }} </h6>
+                <h6> $ {{ this.price }} </h6>
+                <a href="/products/{{this._id}}" target="_self"> INSIGHT </a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom-Me</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap);:root{--primary-color:#006a71}*{box-sizing:border-box;font:1em monospace;margin:0!important;padding:0!important}body{font-family:Roboto,monospace;background-color:#ffd;max-width:100vw;display:flex;flex-direction:column;min-height:100vh}section{flex-grow:1}a{text-decoration:none;display:inline;color:var(--primary-color);font:1em monospace}h1,h2,h3,h4,h5,h6{color:var(--primary-color);font:1.5em monospace}nav{margin-top:10px;margin-bottom:16px;background-color:#d3de32}nav .navigation a{color:var(--primary-color);margin-right:20px;text-decoration:none;font:1em monospace}nav .navigation a:hover{cursor:pointer;box-shadow:0 0 10px #cbeaed}nav .navigation #Brand{color:coral;font:1.5rem monospace}nav .navigation #Brand:hover{cursor:none;box-shadow:none;text-decoration:underline}header div>.MyChart{width:30vw;box-shadow:0 0 8px #006a71;margin:10% 10%!important}form{width:85%;margin:15px 7% 15px 7%!important;padding:2rem 2rem 2rem 2rem!important;box-shadow:0 0 5px coral}input{width:100%;display:table-row;border-color:inherit;height:2rem;margin-left:10%;font:1rem monospace}.row{width:100%;display:table-row;vertical-align:inherit;border-color:inherit}.col{display:table-column;display:inline-block;margin:2rem 2rem 2rem 2rem!important}.cover{align-items:center;width:200px;box-shadow:0 0 10px coral;display:inline-block}.product-img{align-items:center;margin:0;padding:0;width:199px;cursor:pointer}.product-body{margin:0;padding:0;display:block;align-items:center}footer{background-color:#d3de32;border-top:1px solid #cbeaed;margin-top:2rem;padding:10px 0 0 0!important}footer .sub-footer{margin:0!important;background-color:#d3c024}footer .sub-footer #Copyright{color:#f1f2f4;font:1rem monospace;text-align:center}@media (max-width:600px){.row{-webkit-flex-direction:column;flex-direction:column}header div>.MyChart{width:50vw;box-shadow:0 0 8px #006a71;margin:20% 20%!important}body{font-family:Roboto,monospace;background-color:ffffdd;max-width:600px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;min-height:100vh}section{flex-grow:1}form{width:80%;margin:10px 10% 10px 10%!important;padding:2rem 2rem 2rem 2rem!important;box-shadow:0 0 5px coral}input{width:100%;display:table-row;border-color:inherit;height:2rem;font:1rem monospace}}
+    </style>
+</head>
+<body>
+    {{>header}}
+    <section>
+        <h1 > Set Payment Details </h1>
+        <form action="/me/payment" method="post">
+            <input type="text" name="nationality"  placeholder="Nationality" autocomplete="country" required>
+            <input type="text" name="address"  placeholder="Address" autocomplete="street-address" required>
+            <input type="text" name="city"  placeholder="City" autocomplete="address-level4" required>
+            <input type="text" name="zipcode"  placeholder="Zipcode" autocomplete="postal-code">
+            <input type="date" name="dateofbirth"  placeholder="Date-of-Birth" autocomplete="bday-day">
+            <input type="tel" name="tel"  placeholder="Tel-no" autocomplete="tel-area-code">
+            <input type="text" name="creditcard"  placeholder="Credit-card" autocomplete="cc-type" required>
+            <input type="number" name="cardno"  placeholder="Credit-card-no:" autocomplete="cc-number" required>
+            <input type="date" name="expdate"  placeholder="Expiration date" autocomplete="cc-exp" required>
+            <input type="number" name="csc"  placeholder="CSC number" autocomplete="cc-csc" required>
+            <input type="submit" value=" SAVE ">
+        </form>
+        <a href="/home" target="_self"> HOME </a>
+        <a href="/me/payment" target="_self">My Payment</a>
+        <a href="/me" target="_self">My Account</a>
+        {{payment}}
+    </section>
+    {{>footer}}
+</body>
+</html>

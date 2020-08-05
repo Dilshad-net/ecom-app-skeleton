@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col">
+        <div class="adSty" style="display: inline-block; width: 60px;">
+            <img src="..." alt="sm-img" sizes="50px">
+            <img src="..." alt="sm-img" sizes="50px">
+            <img src="..." alt="sm-img" sizes="50px">
+        </div>
+    </div>
+    <div class="col">
+        <img src="..." alt="feature_img" class="product-img">
+    </div>
+    <div class="col">
+
+    </div>
+    <div class="col">
+        <div class="product-body">
+            <h6> Name : {{ product.name }}</h6>
+            <h6> Detail : {{ product.description }} </h6>
+            <h6> Price : $ {{ product.price }}</h6>
+            <h6> Quantity : {{ product.quantity }} </h6>
+            <h6> Rating : 5 &star; </h6>
+            <a href="/products/{{product._id}}/buy" target="_self"> INSIGHT </a>
+        </div>
+    </div>
+</div>
